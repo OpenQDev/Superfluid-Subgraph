@@ -1,0 +1,10 @@
+{
+    "network": "mainnet",
+    "testNetwork": "ganache",
+    "hostStartBlock": 0,
+    "hostAddress": "0xc5a5C42992dECbae36851359345FE25997F5C42d",
+    "cfaAddress": "0xf0D7de80A1C242fA3C738b083C422d65c6c7ABF1",
+    "idaAddress": "0x1A7A3e29c3c4b3C858f2DeD8bE6ed51A07589ecF",
+    "superTokenFactoryAddress": "0xBF908677c54510FE1b47FD0C212355A36417A8c7",
+    "resolverV1Address": "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1"
+}

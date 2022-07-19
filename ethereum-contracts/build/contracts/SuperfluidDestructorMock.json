@@ -1,0 +1,411 @@
+{
+  "contractName": "SuperfluidDestructorMock",
+  "abi": [
+    {
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "NON_UPGRADABLE_DEPLOYMENT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"NON_UPGRADABLE_DEPLOYMENT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/mocks/SuperfluidDestructorMock.sol\":\"SuperfluidDestructorMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/mocks/SuperfluidDestructorMock.sol\":{\"keccak256\":\"0x518e2e535e31e3f664699c5c84e6ec0d709b449c4446be82620120aba8f964ff\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://778c67df86462f3fbf9b8b07d5aebe66060b5c1602cbed290d598c4b4ce8ed38\",\"dweb:/ipfs/QmSnRWFWtT8Fg2GwrfHRK2fZ5BzYeLMyjaJrdbVS8mgRJF\"]}},\"version\":1}",
+  "bytecode": "0x60a06040526000608052348015601457600080fd5b50608051609c61002d600039600060300152609c6000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063cd312ec414602c575b6000ff5b60527f000000000000000000000000000000000000000000000000000000000000000081565b604051901515815260200160405180910390f3fea2646970667358221220c72aa58033c704e7313cf2642e6160244cc73694f0e9667ba20efe757a05f96464736f6c634300080e0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063cd312ec414602c575b6000ff5b60527f000000000000000000000000000000000000000000000000000000000000000081565b604051901515815260200160405180910390f3fea2646970667358221220c72aa58033c704e7313cf2642e6160244cc73694f0e9667ba20efe757a05f96464736f6c634300080e0033",
+  "immutableReferences": {
+    "29683": [
+      {
+        "length": 32,
+        "start": 48
+      }
+    ]
+  },
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:203:106",
+        "statements": [
+          {
+            "nodeType": "YulBlock",
+            "src": "6:3:106",
+            "statements": []
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "109:92:106",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "119:26:106",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "131:9:106"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "142:2:106",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "127:3:106"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "127:18:106"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "119:4:106"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "161:9:106"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "name": "value0",
+                                "nodeType": "YulIdentifier",
+                                "src": "186:6:106"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "iszero",
+                              "nodeType": "YulIdentifier",
+                              "src": "179:6:106"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "179:14:106"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "iszero",
+                          "nodeType": "YulIdentifier",
+                          "src": "172:6:106"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "172:22:106"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "154:6:106"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "154:41:106"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "154:41:106"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "78:9:106",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "89:6:106",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "100:4:106",
+                "type": ""
+              }
+            ],
+            "src": "14:187:106"
+          }
+        ]
+      },
+      "contents": "{\n    { }\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, iszero(iszero(value0)))\n    }\n}",
+      "id": 106,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "79:204:82:-:0;;;170:5;120:55;;79:204;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "79:204:82:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;270:1;249:24;120:55;;;;;;;;179:14:106;;172:22;154:41;;142:2;127:18;120:55:82;;;;;;",
+  "source": "// SPDX-License-Identifier: AGPLv3\n// solhint-disable\npragma solidity 0.8.14;\n\ncontract SuperfluidDestructorMock {\n\n    bool immutable public NON_UPGRADABLE_DEPLOYMENT = false;\n\n    fallback() external {\n        // this == impl in this call\n        selfdestruct(payable(0));\n    }\n\n}\n",
+  "sourcePath": "/Users/alo/protocol-monorepo/packages/ethereum-contracts/contracts/mocks/SuperfluidDestructorMock.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/mocks/SuperfluidDestructorMock.sol",
+    "exportedSymbols": {
+      "SuperfluidDestructorMock": [
+        29695
+      ]
+    },
+    "id": 29696,
+    "license": "AGPLv3",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 29680,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".14"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "54:23:82"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SuperfluidDestructorMock",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 29695,
+        "linearizedBaseContracts": [
+          29695
+        ],
+        "name": "SuperfluidDestructorMock",
+        "nameLocation": "88:24:82",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "cd312ec4",
+            "id": 29683,
+            "mutability": "immutable",
+            "name": "NON_UPGRADABLE_DEPLOYMENT",
+            "nameLocation": "142:25:82",
+            "nodeType": "VariableDeclaration",
+            "scope": 29695,
+            "src": "120:55:82",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 29681,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "120:4:82",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "hexValue": "66616c7365",
+              "id": 29682,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "170:5:82",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 29693,
+              "nodeType": "Block",
+              "src": "202:78:82",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "30",
+                            "id": 29689,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "270:1:82",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 29688,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "262:8:82",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_payable_$",
+                            "typeString": "type(address payable)"
+                          },
+                          "typeName": {
+                            "id": 29687,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "262:8:82",
+                            "stateMutability": "payable",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 29690,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "262:10:82",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 29686,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967275,
+                      "src": "249:12:82",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                        "typeString": "function (address payable)"
+                      }
+                    },
+                    "id": 29691,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "249:24:82",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 29692,
+                  "nodeType": "ExpressionStatement",
+                  "src": "249:24:82"
+                }
+              ]
+            },
+            "id": 29694,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 29684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:2:82"
+            },
+            "returnParameters": {
+              "id": 29685,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "202:0:82"
+            },
+            "scope": 29695,
+            "src": "182:98:82",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 29696,
+        "src": "79:204:82",
+        "usedErrors": []
+      }
+    ],
+    "src": "54:230:82"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-15T06:25:31.645Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

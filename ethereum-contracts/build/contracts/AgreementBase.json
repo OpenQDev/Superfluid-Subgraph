@@ -1,0 +1,850 @@
+{
+  "contractName": "AgreementBase",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "uuid",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "codeAddress",
+          "type": "address"
+        }
+      ],
+      "name": "CodeUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "agreementType",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getCodeAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "codeAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISuperfluidToken",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        }
+      ],
+      "name": "realtimeBalanceOf",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "dynamicBalance",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deposit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "owedDeposit",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "proxiableUUID",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateCode",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"uuid\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"codeAddress\",\"type\":\"address\"}],\"name\":\"CodeUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"agreementType\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCodeAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"codeAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract ISuperfluidToken\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"realtimeBalanceOf\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"dynamicBalance\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"deposit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"owedDeposit\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"updateCode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Superfluid\",\"kind\":\"dev\",\"methods\":{\"agreementType()\":{\"details\":\"Get the type of the agreement class\"},\"getCodeAddress()\":{\"details\":\"Get current implementation code address.\"},\"proxiableUUID()\":{\"details\":\"Proxiable UUID marker function, this would help to avoid wrong logic      contract to be used for upgrading. NOTE: The semantics of the UUID deviates from the actual UUPS standard,       where it is equivalent of _IMPLEMENTATION_SLOT.\"},\"realtimeBalanceOf(address,address,uint256)\":{\"details\":\"Calculate the real-time balance for the account of this agreement class\",\"params\":{\"account\":\"Account the state belongs to\",\"time\":\"Time used for the calculation\"},\"returns\":{\"deposit\":\"Account deposit amount of this agreement\",\"dynamicBalance\":\"Dynamic balance portion of real-time balance of this agreement\",\"owedDeposit\":\"Account owed deposit amount of this agreement\"}}},\"title\":\"Superfluid agreement base boilerplate contract\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/agreements/AgreementBase.sol\":\"AgreementBase\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x2a21b14ff90012878752f230d3ffd5c3405e5938d06c97a7d89c0a64561d0d66\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3313a8f9bb1f9476857c9050067b31982bf2140b83d84f3bc0cec1f62bbe947f\",\"dweb:/ipfs/Qma17Pk8NRe7aB4UD3jjVxk7nSFaov3eQyv86hcyqkwJRV\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xd6153ce99bcdcce22b124f755e72553295be6abcd63804cfdffceb188b8bef10\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://35c47bece3c03caaa07fab37dd2bb3413bfbca20db7bd9895024390e0a469487\",\"dweb:/ipfs/QmPGWT2x3QHcKxqe6gRmAkdakhbaRgx3DLzcakHz5M4eXG\"]},\"project:/contracts/agreements/AgreementBase.sol\":{\"keccak256\":\"0xa34a1b2dd83146a5ed280509f71a1c020ce1985e603da0fc3599eff71d234ab4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://0c9e9eb4f857ddef830bd7bc9523151f7de82bf4ecfca1aeb9e8de1588e2e07d\",\"dweb:/ipfs/QmaFU7E1XGTYiHCQicCjLNSzYyBgEHdR5pcC64MzCCsNbC\"]},\"project:/contracts/interfaces/superfluid/ISuperAgreement.sol\":{\"keccak256\":\"0xc3a6a907245116bcecc70fe4b207454012e8ce4fa190228fb8bbe39e0b1bc5cf\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://83c116bdae48685d20e5a27c942111e685ec1ef6334e7ff6f6d9af66edbd8025\",\"dweb:/ipfs/QmTnVuNTaRFiDmkAmDk7NFYdfQTW1kqgBZiY2exC6k8jDx\"]},\"project:/contracts/interfaces/superfluid/ISuperfluidToken.sol\":{\"keccak256\":\"0x3eec5a3bf337cd319c1918fd1b16f350cf5f6850ac71f6859066fbf86e734ff4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://cda19a2f5ca18e79c1e2300c8efac84c718df76c4fb313f59f84264a4c6b398a\",\"dweb:/ipfs/QmfQiwgDH5Q64w5ufBnDzVaeWv6WCZ6fLTrYu1FSYfBGhq\"]},\"project:/contracts/upgradability/UUPSProxiable.sol\":{\"keccak256\":\"0xabe3beb46dff1433d7ae61fe470fc347967d5a5b09d48fa45f35ddb2735d61f2\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://ad0fdb3210d3b0ed62886decdeef62b43bdbdd59bd55fc5ea3d636e97fbfb65d\",\"dweb:/ipfs/QmPjd6ehqgoiHkrf2g2h9AZRxKakqxsGx1GTiy5DSwfYJg\"]},\"project:/contracts/upgradability/UUPSUtils.sol\":{\"keccak256\":\"0xe624225773a60f62c7a0687afb0536ba19a17e4e5605ae71e8af77a0287aca59\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://4294e5eb5b194477bca3b8ca04ca92a6fe72dd6cf8da8f0d942a4a86c41c1c7f\",\"dweb:/ipfs/QmdfPXZxJPaBjKNfC8joTcvEhWammJHzRACB1S18sFYfd7\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: AGPLv3\npragma solidity 0.8.14;\n\nimport { UUPSProxiable } from \"../upgradability/UUPSProxiable.sol\";\nimport { ISuperAgreement } from \"../interfaces/superfluid/ISuperAgreement.sol\";\n\n\n/**\n * @title Superfluid agreement base boilerplate contract\n * @author Superfluid\n */\nabstract contract AgreementBase is\n    UUPSProxiable,\n    ISuperAgreement\n{\n    address immutable internal _host;\n\n    constructor(address host)\n    {\n        _host = host;\n    }\n\n    function proxiableUUID()\n        public view override\n        returns (bytes32)\n    {\n        return ISuperAgreement(this).agreementType();\n    }\n\n    function updateCode(address newAddress)\n        external override\n    {\n        require(msg.sender == _host, \"only host can update code\");\n        return _updateCodeAddress(newAddress);\n    }\n\n}\n",
+  "sourcePath": "/Users/alo/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/AgreementBase.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/agreements/AgreementBase.sol",
+    "exportedSymbols": {
+      "AgreementBase": [
+        6063
+      ],
+      "ISuperAgreement": [
+        18959
+      ],
+      "UUPSProxiable": [
+        36545
+      ]
+    },
+    "id": 6064,
+    "license": "AGPLv3",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6009,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".14"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:23:31"
+      },
+      {
+        "absolutePath": "project:/contracts/upgradability/UUPSProxiable.sol",
+        "file": "../upgradability/UUPSProxiable.sol",
+        "id": 6011,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6064,
+        "sourceUnit": 36546,
+        "src": "60:67:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6010,
+              "name": "UUPSProxiable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36545,
+              "src": "69:13:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/superfluid/ISuperAgreement.sol",
+        "file": "../interfaces/superfluid/ISuperAgreement.sol",
+        "id": 6013,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6064,
+        "sourceUnit": 18960,
+        "src": "128:79:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6012,
+              "name": "ISuperAgreement",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 18959,
+              "src": "137:15:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6015,
+              "name": "UUPSProxiable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 36545,
+              "src": "336:13:31"
+            },
+            "id": 6016,
+            "nodeType": "InheritanceSpecifier",
+            "src": "336:13:31"
+          },
+          {
+            "baseName": {
+              "id": 6017,
+              "name": "ISuperAgreement",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 18959,
+              "src": "355:15:31"
+            },
+            "id": 6018,
+            "nodeType": "InheritanceSpecifier",
+            "src": "355:15:31"
+          }
+        ],
+        "canonicalName": "AgreementBase",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6014,
+          "nodeType": "StructuredDocumentation",
+          "src": "210:86:31",
+          "text": " @title Superfluid agreement base boilerplate contract\n @author Superfluid"
+        },
+        "fullyImplemented": false,
+        "id": 6063,
+        "linearizedBaseContracts": [
+          6063,
+          18959,
+          36545,
+          858
+        ],
+        "name": "AgreementBase",
+        "nameLocation": "315:13:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6020,
+            "mutability": "immutable",
+            "name": "_host",
+            "nameLocation": "404:5:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6063,
+            "src": "377:32:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6019,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "377:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6029,
+              "nodeType": "Block",
+              "src": "446:29:31",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6027,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6025,
+                      "name": "_host",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6020,
+                      "src": "456:5:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 6026,
+                      "name": "host",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6022,
+                      "src": "464:4:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "456:12:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6028,
+                  "nodeType": "ExpressionStatement",
+                  "src": "456:12:31"
+                }
+              ]
+            },
+            "id": 6030,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6023,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6022,
+                  "mutability": "mutable",
+                  "name": "host",
+                  "nameLocation": "436:4:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6030,
+                  "src": "428:12:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6021,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "427:14:31"
+            },
+            "returnParameters": {
+              "id": 6024,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "446:0:31"
+            },
+            "scope": 6063,
+            "src": "416:59:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "baseFunctions": [
+              36485
+            ],
+            "body": {
+              "id": 6042,
+              "nodeType": "Block",
+              "src": "565:61:31",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 6037,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967268,
+                            "src": "598:4:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_AgreementBase_$6063",
+                              "typeString": "contract AgreementBase"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_AgreementBase_$6063",
+                              "typeString": "contract AgreementBase"
+                            }
+                          ],
+                          "id": 6036,
+                          "name": "ISuperAgreement",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18959,
+                          "src": "582:15:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_ISuperAgreement_$18959_$",
+                            "typeString": "type(contract ISuperAgreement)"
+                          }
+                        },
+                        "id": 6038,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "582:21:31",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ISuperAgreement_$18959",
+                          "typeString": "contract ISuperAgreement"
+                        }
+                      },
+                      "id": 6039,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "agreementType",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18941,
+                      "src": "582:35:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_bytes32_$",
+                        "typeString": "function () view external returns (bytes32)"
+                      }
+                    },
+                    "id": 6040,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "582:37:31",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 6035,
+                  "id": 6041,
+                  "nodeType": "Return",
+                  "src": "575:44:31"
+                }
+              ]
+            },
+            "functionSelector": "52d1902d",
+            "id": 6043,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proxiableUUID",
+            "nameLocation": "490:13:31",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 6032,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "526:8:31"
+            },
+            "parameters": {
+              "id": 6031,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:2:31"
+            },
+            "returnParameters": {
+              "id": 6035,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6034,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6043,
+                  "src": "552:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6033,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "552:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "551:9:31"
+            },
+            "scope": 6063,
+            "src": "481:145:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              36479
+            ],
+            "body": {
+              "id": 6061,
+              "nodeType": "Block",
+              "src": "702:121:31",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 6053,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 6050,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "720:3:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 6051,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "720:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 6052,
+                          "name": "_host",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6020,
+                          "src": "734:5:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "720:19:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "6f6e6c7920686f73742063616e2075706461746520636f6465",
+                        "id": 6054,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "741:27:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6a5a6d12055846614699866b43f4ca83ca269360732daadab688ae700f7513a6",
+                          "typeString": "literal_string \"only host can update code\""
+                        },
+                        "value": "only host can update code"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6a5a6d12055846614699866b43f4ca83ca269360732daadab688ae700f7513a6",
+                          "typeString": "literal_string \"only host can update code\""
+                        }
+                      ],
+                      "id": 6049,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "712:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6055,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "712:57:31",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6056,
+                  "nodeType": "ExpressionStatement",
+                  "src": "712:57:31"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 6058,
+                        "name": "newAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6045,
+                        "src": "805:10:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 6057,
+                      "name": "_updateCodeAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36538,
+                      "src": "786:18:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 6059,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "786:30:31",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 6048,
+                  "id": 6060,
+                  "nodeType": "Return",
+                  "src": "779:37:31"
+                }
+              ]
+            },
+            "functionSelector": "46951954",
+            "id": 6062,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateCode",
+            "nameLocation": "641:10:31",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 6047,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "689:8:31"
+            },
+            "parameters": {
+              "id": 6046,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6045,
+                  "mutability": "mutable",
+                  "name": "newAddress",
+                  "nameLocation": "660:10:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6062,
+                  "src": "652:18:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6044,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "652:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "651:20:31"
+            },
+            "returnParameters": {
+              "id": 6048,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "702:0:31"
+            },
+            "scope": 6063,
+            "src": "632:191:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6064,
+        "src": "297:529:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:792:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-15T06:25:31.228Z",
+  "devdoc": {
+    "author": "Superfluid",
+    "kind": "dev",
+    "methods": {
+      "agreementType()": {
+        "details": "Get the type of the agreement class"
+      },
+      "getCodeAddress()": {
+        "details": "Get current implementation code address."
+      },
+      "proxiableUUID()": {
+        "details": "Proxiable UUID marker function, this would help to avoid wrong logic      contract to be used for upgrading. NOTE: The semantics of the UUID deviates from the actual UUPS standard,       where it is equivalent of _IMPLEMENTATION_SLOT."
+      },
+      "realtimeBalanceOf(address,address,uint256)": {
+        "details": "Calculate the real-time balance for the account of this agreement class",
+        "params": {
+          "account": "Account the state belongs to",
+          "time": "Time used for the calculation"
+        },
+        "returns": {
+          "deposit": "Account deposit amount of this agreement",
+          "dynamicBalance": "Dynamic balance portion of real-time balance of this agreement",
+          "owedDeposit": "Account owed deposit amount of this agreement"
+        }
+      }
+    },
+    "title": "Superfluid agreement base boilerplate contract",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

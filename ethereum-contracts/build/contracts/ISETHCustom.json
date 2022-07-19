@@ -1,0 +1,343 @@
+{
+  "contractName": "ISETHCustom",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "upgradeByETH",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeByETHTo",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "wad",
+          "type": "uint256"
+        }
+      ],
+      "name": "downgradeToETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"wad\",\"type\":\"uint256\"}],\"name\":\"downgradeToETH\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"upgradeByETH\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"upgradeByETHTo\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Superfluid\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Super ETH (SETH) custom token interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/tokens/ISETH.sol\":\"ISETHCustom\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"@openzeppelin/contracts/token/ERC777/IERC777.sol\":{\"keccak256\":\"0x093eaf9a4b05adf2bd3730b753f9e1725ed34b80ea4b5f08477ff2f46a188586\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://46e9a9b37e8cb6332ed21a8d3f8a6723d897e4a97db63095424522a80b3cfc15\",\"dweb:/ipfs/QmdHcBPPGKQBnmeaAN3Y6YKUPqwR73RrHTiX5uTr6eVx1M\"]},\"project:/contracts/interfaces/superfluid/Definitions.sol\":{\"keccak256\":\"0x199095781e4221b6015d859558da09977f79199f38d342ab4899c2cecdf8cec1\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://9fd3a5a8b16d8517e2af10e20390a9af5adbfa4e783e3a7dd89eb4588db98385\",\"dweb:/ipfs/QmPDtGR43DeMMVsHjUh7FYzMGsFKPpGriRkaahFpN5T5d3\"]},\"project:/contracts/interfaces/superfluid/ISuperAgreement.sol\":{\"keccak256\":\"0xc3a6a907245116bcecc70fe4b207454012e8ce4fa190228fb8bbe39e0b1bc5cf\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://83c116bdae48685d20e5a27c942111e685ec1ef6334e7ff6f6d9af66edbd8025\",\"dweb:/ipfs/QmTnVuNTaRFiDmkAmDk7NFYdfQTW1kqgBZiY2exC6k8jDx\"]},\"project:/contracts/interfaces/superfluid/ISuperApp.sol\":{\"keccak256\":\"0x42b604992cf67321cc12e8bed16543df0db4eaf125b8c1c82c330ebbeb20c014\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://7c18b00caf7b8be7e11f75284fb96263ce48a3984d56f2a91ec44cae4413d2fc\",\"dweb:/ipfs/QmWVzdW9KnkwAVe9g5zRuMoqCf7N89AoBfzzRr8puw5d8a\"]},\"project:/contracts/interfaces/superfluid/ISuperToken.sol\":{\"keccak256\":\"0xcff22ed43df0f34a645e6cbe0d7c5fd08f204d769e9095bc59d7c2fe6d11b7d6\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://944b8c5a37839b40ec8ee1ccfecbaf007808a61ea16c7b1351a7184606772032\",\"dweb:/ipfs/QmbUKZqZtVfqZMKYnQUygE4svatKuN9kT2ibrnxMuWXR7n\"]},\"project:/contracts/interfaces/superfluid/ISuperTokenFactory.sol\":{\"keccak256\":\"0x68a466c978557e47bd7385b1d7d78f1c8fb07462a870efc5a791008e33a4f535\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://d109879bdb7f022560a792af2ff481df729bf1b4b8e1831b8022f4d12892d41d\",\"dweb:/ipfs/QmRSWqHq8CP5XWgyV4mJpPxMg33s312s2K5ndHRHVqqZ8n\"]},\"project:/contracts/interfaces/superfluid/ISuperfluid.sol\":{\"keccak256\":\"0xf16efd1ba72322e77e0d936b723c0e71eb14c23e11cf69efae8c7caa407012cf\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://ff4bb321b72dc3332984346e5b66ad131c6132101658fe6707d7a9d043f981ab\",\"dweb:/ipfs/QmXmVD2mZ3LRb7wQZ2VcrpYhtjm21zUe5hPDDDJA1WXbFz\"]},\"project:/contracts/interfaces/superfluid/ISuperfluidGovernance.sol\":{\"keccak256\":\"0xea33d20751ffea4f4446bc04f6c10194fb4da0803a988586d41d49cf4859731c\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://7716b1f5eec0a7ac8780d82de4f0274ecd7059be4eec46c82b0b7adce110f10b\",\"dweb:/ipfs/QmWRQafvdCBsyfDYnevXSav1AAz8uZRRBwh2be5Z3vSfVN\"]},\"project:/contracts/interfaces/superfluid/ISuperfluidToken.sol\":{\"keccak256\":\"0x3eec5a3bf337cd319c1918fd1b16f350cf5f6850ac71f6859066fbf86e734ff4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://cda19a2f5ca18e79c1e2300c8efac84c718df76c4fb313f59f84264a4c6b398a\",\"dweb:/ipfs/QmfQiwgDH5Q64w5ufBnDzVaeWv6WCZ6fLTrYu1FSYfBGhq\"]},\"project:/contracts/interfaces/tokens/ERC20WithTokenInfo.sol\":{\"keccak256\":\"0x66708dae3fcd06e6fc0a46f2959fc2d1e6b9361f28598337339d26af8eb8c0f9\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://77b80718cec21b81ef190c19fb9fbe73913a95c71f7e6715f671bbe8a224dafc\",\"dweb:/ipfs/QmUdsc6DF2Bgih5VZm7sfaECjhGmwE7tAx8pMkzGQgVKQw\"]},\"project:/contracts/interfaces/tokens/ISETH.sol\":{\"keccak256\":\"0x15f299de1e9277a614a15c4136785d616ab52c89ec70edd430928c20fcd21e78\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://f13e6074da3a5da4c9f537bfa3d8b3f9c83df59393e94a691a14e89d5d9a76ef\",\"dweb:/ipfs/QmZTmcNtnChdFMMku1FWzsDFJHXAieY5PaaN2JtSXs2Hf3\"]},\"project:/contracts/interfaces/tokens/TokenInfo.sol\":{\"keccak256\":\"0x70e573644a0ff271c0ccef526809e9d9ab4950ec58755ca84e833cde3b8f3df0\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://aea3709687cc37ba625f4cc882fbdb149a7bf5be5afe2b030203c8719641a77b\",\"dweb:/ipfs/QmVpvfR6ZheE5wNUK9CobaVBgVvEnEPkvjWF9cfwyZr7eQ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: AGPLv3\npragma solidity >= 0.8.0;\n\nimport { ISuperToken } from \"../superfluid/ISuperToken.sol\";\n\n\n/**\n * @title Super ETH (SETH) custom token interface\n * @author Superfluid\n */\ninterface ISETHCustom {\n    // using native token\n    function upgradeByETH() external payable;\n    function upgradeByETHTo(address to) external payable;\n    function downgradeToETH(uint wad) external;\n}\n\n/**\n * @title Super ETH (SETH) full interface\n * @author Superfluid\n */\n// solhint-disable-next-line no-empty-blocks\ninterface ISETH is ISETHCustom, ISuperToken {}\n",
+  "sourcePath": "/Users/alo/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/tokens/ISETH.sol",
+    "exportedSymbols": {
+      "ISETH": [
+        20504
+      ],
+      "ISETHCustom": [
+        20498
+      ],
+      "ISuperToken": [
+        19449
+      ]
+    },
+    "id": 20505,
+    "license": "AGPLv3",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20481,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:25:54"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/superfluid/ISuperToken.sol",
+        "file": "../superfluid/ISuperToken.sol",
+        "id": 20483,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 20505,
+        "sourceUnit": 19450,
+        "src": "62:60:54",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 20482,
+              "name": "ISuperToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 19449,
+              "src": "71:11:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISETHCustom",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 20484,
+          "nodeType": "StructuredDocumentation",
+          "src": "125:79:54",
+          "text": " @title Super ETH (SETH) custom token interface\n @author Superfluid"
+        },
+        "fullyImplemented": false,
+        "id": 20498,
+        "linearizedBaseContracts": [
+          20498
+        ],
+        "name": "ISETHCustom",
+        "nameLocation": "215:11:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "cf81464b",
+            "id": 20487,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeByETH",
+            "nameLocation": "268:12:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "280:2:54"
+            },
+            "returnParameters": {
+              "id": 20486,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "299:0:54"
+            },
+            "scope": 20498,
+            "src": "259:41:54",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "7687d19b",
+            "id": 20492,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeByETHTo",
+            "nameLocation": "314:14:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20489,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "337:2:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20492,
+                  "src": "329:10:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "328:12:54"
+            },
+            "returnParameters": {
+              "id": 20491,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:0:54"
+            },
+            "scope": 20498,
+            "src": "305:53:54",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "160e8be3",
+            "id": 20497,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "downgradeToETH",
+            "nameLocation": "372:14:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20494,
+                  "mutability": "mutable",
+                  "name": "wad",
+                  "nameLocation": "392:3:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20497,
+                  "src": "387:8:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20493,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "387:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:10:54"
+            },
+            "returnParameters": {
+              "id": 20496,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "405:0:54"
+            },
+            "scope": 20498,
+            "src": "363:43:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20505,
+        "src": "205:203:54",
+        "usedErrors": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 20500,
+              "name": "ISETHCustom",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 20498,
+              "src": "546:11:54"
+            },
+            "id": 20501,
+            "nodeType": "InheritanceSpecifier",
+            "src": "546:11:54"
+          },
+          {
+            "baseName": {
+              "id": 20502,
+              "name": "ISuperToken",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 19449,
+              "src": "559:11:54"
+            },
+            "id": 20503,
+            "nodeType": "InheritanceSpecifier",
+            "src": "559:11:54"
+          }
+        ],
+        "canonicalName": "ISETH",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 20499,
+          "nodeType": "StructuredDocumentation",
+          "src": "410:71:54",
+          "text": " @title Super ETH (SETH) full interface\n @author Superfluid"
+        },
+        "fullyImplemented": false,
+        "id": 20504,
+        "linearizedBaseContracts": [
+          20504,
+          19449,
+          2352,
+          1630,
+          20526,
+          20409,
+          20498
+        ],
+        "name": "ISETH",
+        "nameLocation": "537:5:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 20505,
+        "src": "527:46:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:539:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-15T06:25:31.420Z",
+  "devdoc": {
+    "author": "Superfluid",
+    "kind": "dev",
+    "methods": {},
+    "title": "Super ETH (SETH) custom token interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
